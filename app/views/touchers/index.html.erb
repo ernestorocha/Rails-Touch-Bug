@@ -1,0 +1,25 @@
+<h1>Listing touchers</h1>
+
+<table>
+  <tr>
+    <th>Touched</th>
+    <th>Desc</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @touchers.each do |toucher| %>
+  <tr>
+    <td><%= toucher.touched_id %></td>
+    <td><%= toucher.desc %></td>
+    <td><%= link_to 'Show', toucher %></td>
+    <td><%= link_to 'Edit', edit_toucher_path(toucher) %></td>
+    <td><%= link_to 'Destroy', toucher, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Toucher', new_toucher_path %>

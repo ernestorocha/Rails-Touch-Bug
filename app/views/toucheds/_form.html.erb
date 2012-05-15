@@ -1,0 +1,21 @@
+<%= form_for(@touched) do |f| %>
+  <% if @touched.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@touched.errors.count, "error") %> prohibited this touched from being saved:</h2>
+
+      <ul>
+      <% @touched.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :set_this %><br />
+    <%= f.check_box :set_this %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

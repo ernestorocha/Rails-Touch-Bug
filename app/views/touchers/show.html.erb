@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Touched:</b>
+  <%= @toucher.touched_id %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%= @toucher.desc %>
+</p>
+
+
+<%= link_to 'Edit', edit_toucher_path(@toucher) %> |
+<%= link_to 'Back', touchers_path %>

@@ -1,0 +1,23 @@
+<h1>Listing toucheds</h1>
+
+<table>
+  <tr>
+    <th>Set this</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @toucheds.each do |touched| %>
+  <tr>
+    <td><%= touched.set_this %></td>
+    <td><%= link_to 'Show', touched %></td>
+    <td><%= link_to 'Edit', edit_touched_path(touched) %></td>
+    <td><%= link_to 'Destroy', touched, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Touched', new_touched_path %>
